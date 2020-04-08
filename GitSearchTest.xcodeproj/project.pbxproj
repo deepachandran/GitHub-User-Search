@@ -9,12 +9,10 @@
 /* Begin PBXBuildFile section */
 		990276602436B10A001F8C58 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902765F2436B10A001F8C58 /* SearchResult.swift */; };
 		9910F10624378A4800492743 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9910F10524378A4800492743 /* SearchResponse.swift */; };
-		99178C56243BE6CF002DC42E /* SearchApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99178C55243BE6CF002DC42E /* SearchApiCall.swift */; };
 		99178C58243C1B02002DC42E /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99178C57243C1B02002DC42E /* Repositories.swift */; };
 		99178C5A243C2E4A002DC42E /* repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99178C59243C2E4A002DC42E /* repos.swift */; };
 		9942431E243A3D130064A65F /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9942431D243A3D130064A65F /* UserDetails.swift */; };
 		998085572435662D00950504 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998085562435662D00950504 /* UserCell.swift */; };
-		998085592435720900950504 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998085582435720900950504 /* Constants.swift */; };
 		99808560243573D700950504 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9980855F243573D700950504 /* Users.swift */; };
 		9982CFB82435029000831BE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9982CFB72435029000831BE5 /* AppDelegate.swift */; };
 		9982CFBA2435029000831BE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9982CFB92435029000831BE5 /* SceneDelegate.swift */; };
@@ -33,12 +31,10 @@
 		6E862607972C3DB6661E585B /* Pods-GitSearchTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitSearchTest.release.xcconfig"; path = "Target Support Files/Pods-GitSearchTest/Pods-GitSearchTest.release.xcconfig"; sourceTree = "<group>"; };
 		9902765F2436B10A001F8C58 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		9910F10524378A4800492743 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
-		99178C55243BE6CF002DC42E /* SearchApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchApiCall.swift; sourceTree = "<group>"; };
 		99178C57243C1B02002DC42E /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 		99178C59243C2E4A002DC42E /* repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repos.swift; sourceTree = "<group>"; };
 		9942431D243A3D130064A65F /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		998085562435662D00950504 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
-		998085582435720900950504 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9980855F243573D700950504 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		9982CFB42435029000831BE5 /* GitSearchTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitSearchTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9982CFB72435029000831BE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,7 +93,6 @@
 		9980855B2435724A00950504 /* Base Classes */ = {
 			isa = PBXGroup;
 			children = (
-				998085582435720900950504 /* Constants.swift */,
 				9902765F2436B10A001F8C58 /* SearchResult.swift */,
 			);
 			path = "Base Classes";
@@ -146,7 +141,6 @@
 				9982CFC52435029400831BE5 /* LaunchScreen.storyboard */,
 				9982CFC82435029400831BE5 /* Info.plist */,
 				9982CFC02435029000831BE5 /* GitSearchTest.xcdatamodeld */,
-				99178C55243BE6CF002DC42E /* SearchApiCall.swift */,
 			);
 			path = GitSearchTest;
 			sourceTree = "<group>";
@@ -266,14 +260,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99178C56243BE6CF002DC42E /* SearchApiCall.swift in Sources */,
 				9910F10624378A4800492743 /* SearchResponse.swift in Sources */,
 				9982CFC22435029000831BE5 /* GitSearchTest.xcdatamodeld in Sources */,
 				99808560243573D700950504 /* Users.swift in Sources */,
 				990276602436B10A001F8C58 /* SearchResult.swift in Sources */,
 				99178C58243C1B02002DC42E /* Repositories.swift in Sources */,
 				999D41602436D07F00141FD2 /* UserViewController.swift in Sources */,
-				998085592435720900950504 /* Constants.swift in Sources */,
 				9982CFBC2435029000831BE5 /* SearchViewController.swift in Sources */,
 				9982CFB82435029000831BE5 /* AppDelegate.swift in Sources */,
 				998085572435662D00950504 /* UserCell.swift in Sources */,
