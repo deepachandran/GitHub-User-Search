@@ -45,34 +45,22 @@
                                                         <constraint firstAttribute="height" constant="90" id="fWc-hb-838"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NiQ-o8-Va9">
-                                                    <rect key="frame" x="116" y="48.666666666666664" width="155" height="22.999999999999993"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NiQ-o8-Va9">
+                                                    <rect key="frame" x="198" y="48.666666666666664" width="94" height="22.999999999999993"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo : ##" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgU-ge-qdG">
-                                                    <rect key="frame" x="291" y="53" width="64" height="16"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="64" id="f50-0H-elv"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="bhb-tv-cRA" firstAttribute="leading" secondItem="hXs-9Y-2Dm" secondAttribute="leading" constant="8" id="0TP-Rr-6jf"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="NiQ-o8-Va9" secondAttribute="bottom" constant="37.329999999999998" id="2rb-Fi-zHE"/>
-                                                <constraint firstItem="NiQ-o8-Va9" firstAttribute="leading" secondItem="bhb-tv-cRA" secondAttribute="trailing" constant="8" id="32F-94-aaF"/>
+                                                <constraint firstItem="NiQ-o8-Va9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bhb-tv-cRA" secondAttribute="trailing" constant="8" symbolic="YES" id="32F-94-aaF"/>
                                                 <constraint firstItem="bhb-tv-cRA" firstAttribute="top" secondItem="hXs-9Y-2Dm" secondAttribute="top" constant="15" id="6EA-fA-8VM"/>
                                                 <constraint firstItem="NiQ-o8-Va9" firstAttribute="top" secondItem="hXs-9Y-2Dm" secondAttribute="topMargin" constant="37.670000000000002" id="6R2-mx-sjC"/>
-                                                <constraint firstItem="QgU-ge-qdG" firstAttribute="leading" secondItem="NiQ-o8-Va9" secondAttribute="trailing" constant="20" id="Bsq-Xm-F5S"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="QgU-ge-qdG" secondAttribute="bottom" constant="40" id="Fl2-Ii-MG7"/>
-                                                <constraint firstAttribute="trailing" secondItem="QgU-ge-qdG" secondAttribute="trailing" constant="8" id="ROj-eu-Yry"/>
                                                 <constraint firstAttribute="bottom" secondItem="bhb-tv-cRA" secondAttribute="bottom" constant="15" id="deU-qv-Jyt"/>
                                                 <constraint firstItem="bhb-tv-cRA" firstAttribute="centerY" secondItem="hXs-9Y-2Dm" secondAttribute="centerY" id="dh8-YY-lgp"/>
-                                                <constraint firstItem="QgU-ge-qdG" firstAttribute="top" secondItem="hXs-9Y-2Dm" secondAttribute="topMargin" constant="42" id="qiy-wX-ZJP"/>
+                                                <constraint firstAttribute="trailing" secondItem="NiQ-o8-Va9" secondAttribute="trailing" constant="71" id="xyo-pr-RKa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
