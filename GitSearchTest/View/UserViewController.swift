@@ -95,7 +95,7 @@ class UserViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 if let dict = response.value as? Dictionary<String, AnyObject> {
 
                         
-                            userObj._userName = (dict["login"] as? String)
+                            userObj._userName = (dict["name"] as? String)
                             userObj._email = (dict["email"] as? String)
                             userObj._joinDate = (dict["created_at"] as? String)
                             userObj._follower = (dict["followers"] as? Int)
@@ -113,13 +113,13 @@ class UserViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                         self.EmailLbl.text = "Email: nil"
                     }
                     else{
-                        self.EmailLbl.text = "Email: \(userObj._email)"
+                        self.EmailLbl.text = "Email: \(userObj._email ?? "Not available")"
                     }
                     if userObj._location == nil {
                         self.LocationLbl.text = "Location: nil"
                     }
                     else{
-                        self.LocationLbl.text = "Location:\(userObj._location)"
+                        self.LocationLbl.text = "Location:\(userObj._location ?? "Not available")"
                     }
                     if userObj._follower == nil {
                        self.FollowerLbl.text = "No followers"
@@ -147,10 +147,10 @@ class UserViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                     dateFormatter.locale = Locale(identifier: "en_US")
                     dateFormatter.dateStyle = .short
                     if userObj._joinDate == nil {
-                       self.JoinDateLbl.text = "nil"
+                       self.JoinDateLbl.text = "Join Date: nil"
                     }
                     else{
-                        self.JoinDateLbl.text = dateFormatter.string(from: date!)
+                        self.JoinDateLbl.text = "Join Date: \(dateFormatter.string(from: date!))"
                     }
                     
                     
@@ -161,14 +161,7 @@ class UserViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                             let image: UIImage = UIImage(data: data)!
                             self.UserImage.image = image
                         }
-                    
-                    //self.UsereNameLbl.text = userObj._userName
-
-
-                   
-                   // vc?.userName = userObj._userName
-                    
-                               // print("hello new cell")
+                
                     }
 
                 }

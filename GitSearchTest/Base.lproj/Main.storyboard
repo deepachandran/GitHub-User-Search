@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RuC-Xp-xf1">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,22 +13,22 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="GitSearchTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHub Searcher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aY5-Ma-Uev">
-                                <rect key="frame" x="105.66666666666669" y="98" width="203" height="29"/>
+                                <rect key="frame" x="105.66666666666669" y="54" width="203" height="29"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search User" translatesAutoresizingMaskIntoConstraints="NO" id="QyA-3S-gH4">
-                                <rect key="frame" x="20" y="142" width="374" height="56"/>
+                                <rect key="frame" x="20" y="98" width="374" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dFA-xP-NFc">
-                                <rect key="frame" x="10" y="228" width="394" height="634"/>
+                                <rect key="frame" x="10" y="184" width="394" height="552"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="userCell" rowHeight="120" id="8fz-uT-Q3f" customClass="UserCell" customModule="GitSearchTest" customModuleProvider="target">
@@ -103,29 +103,25 @@
             <objects>
                 <viewController storyboardIdentifier="UserViewController" id="CSq-YP-u3h" customClass="UserViewController" customModule="GitSearchTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TcW-ed-OmR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHub Searcher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLG-Sl-c2c">
-                                <rect key="frame" x="105.33333333333333" y="110" width="203.33333333333337" height="29"/>
+                                <rect key="frame" x="105.33333333333331" y="66" width="203.33333333333337" height="19"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="kIY-FA-k8f">
-                                <rect key="frame" x="0.0" y="303" width="414" height="170"/>
+                                <rect key="frame" x="0.0" y="249" width="414" height="0.0"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <searchBar contentMode="redraw" placeholder="Search Repositories" translatesAutoresizingMaskIntoConstraints="NO" id="En3-nU-FIq">
-                                <rect key="frame" x="0.0" y="473" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qj0-f2-cnH">
-                                <rect key="frame" x="0.0" y="529" width="414" height="333"/>
+                                <rect key="frame" x="0.0" y="338" width="414" height="398"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="repoTableviewCell" rowHeight="120" id="MGs-Jo-zsK" customClass="RepoTableViewCell" customModule="GitSearchTest" customModuleProvider="target">
@@ -183,7 +179,7 @@
                                 </prototypes>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Wh-Kq-wJY">
-                                <rect key="frame" x="20" y="164" width="120" height="120"/>
+                                <rect key="frame" x="20" y="110" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="rY1-iD-Dwu"/>
                                     <constraint firstAttribute="height" constant="120" id="zEf-IX-g9c"/>
@@ -191,67 +187,71 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="frR-mb-tgj">
-                                <rect key="frame" x="208" y="163" width="156" height="121"/>
+                                <rect key="frame" x="165" y="110" width="229" height="121"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="UserName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxG-cd-VFa">
-                                        <rect key="frame" x="0.0" y="0.0" width="156" height="19.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="229" height="19.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mm-AC-wGm">
-                                        <rect key="frame" x="0.0" y="19.333333333333343" width="156" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="19.333333333333343" width="229" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhM-DQ-i1D">
-                                        <rect key="frame" x="0.0" y="39.666666666666657" width="156" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="39.666666666666657" width="229" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neg-yt-jNf">
-                                        <rect key="frame" x="0.0" y="60.000000000000007" width="156" height="20.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="60.000000000000007" width="229" height="20.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeD-yF-ABp">
-                                        <rect key="frame" x="0.0" y="80.333333333333343" width="156" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="80.333333333333343" width="229" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTf-If-QOx">
-                                        <rect key="frame" x="0.0" y="100.66666666666669" width="156" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="100.66666666666666" width="229" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <searchBar contentMode="redraw" placeholder="Search Repositories" translatesAutoresizingMaskIntoConstraints="NO" id="En3-nU-FIq">
+                                <rect key="frame" x="0.0" y="266" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="En3-nU-FIq" firstAttribute="top" secondItem="kIY-FA-k8f" secondAttribute="bottom" symbolic="YES" id="04T-AG-zhQ"/>
-                            <constraint firstItem="kIY-FA-k8f" firstAttribute="top" secondItem="frR-mb-tgj" secondAttribute="bottom" constant="19" id="5Bn-hH-v1T"/>
+                            <constraint firstItem="En3-nU-FIq" firstAttribute="top" secondItem="kIY-FA-k8f" secondAttribute="bottom" constant="17" id="04T-AG-zhQ"/>
+                            <constraint firstItem="kIY-FA-k8f" firstAttribute="top" secondItem="frR-mb-tgj" secondAttribute="bottom" constant="18" id="5Bn-hH-v1T"/>
                             <constraint firstItem="Qj0-f2-cnH" firstAttribute="leading" secondItem="JzW-Z4-Mwm" secondAttribute="leading" id="5hX-3o-PAH"/>
-                            <constraint firstItem="frR-mb-tgj" firstAttribute="top" secondItem="eLG-Sl-c2c" secondAttribute="bottom" constant="24" id="5mK-AZ-WXr"/>
-                            <constraint firstItem="kIY-FA-k8f" firstAttribute="leading" secondItem="JzW-Z4-Mwm" secondAttribute="leading" id="7Ob-QP-jda"/>
+                            <constraint firstItem="frR-mb-tgj" firstAttribute="top" secondItem="eLG-Sl-c2c" secondAttribute="bottom" constant="25" id="5mK-AZ-WXr"/>
                             <constraint firstItem="kIY-FA-k8f" firstAttribute="top" secondItem="0Wh-Kq-wJY" secondAttribute="bottom" constant="19" id="90d-Ug-mhe"/>
                             <constraint firstItem="En3-nU-FIq" firstAttribute="leading" secondItem="JzW-Z4-Mwm" secondAttribute="leading" id="BsF-NT-nab"/>
-                            <constraint firstItem="Qj0-f2-cnH" firstAttribute="top" secondItem="En3-nU-FIq" secondAttribute="bottom" symbolic="YES" id="JTJ-yQ-0ke"/>
-                            <constraint firstItem="kIY-FA-k8f" firstAttribute="trailing" secondItem="JzW-Z4-Mwm" secondAttribute="trailing" id="JZG-Si-9dD"/>
-                            <constraint firstItem="frR-mb-tgj" firstAttribute="leading" secondItem="0Wh-Kq-wJY" secondAttribute="trailing" constant="68" id="Otf-Ph-1vX"/>
+                            <constraint firstItem="Qj0-f2-cnH" firstAttribute="top" secondItem="En3-nU-FIq" secondAttribute="bottom" constant="16" id="JTJ-yQ-0ke"/>
+                            <constraint firstItem="frR-mb-tgj" firstAttribute="leading" secondItem="0Wh-Kq-wJY" secondAttribute="trailing" constant="25" id="Otf-Ph-1vX"/>
                             <constraint firstItem="Qj0-f2-cnH" firstAttribute="trailing" secondItem="JzW-Z4-Mwm" secondAttribute="trailing" id="P3z-xo-Gwh"/>
-                            <constraint firstItem="JzW-Z4-Mwm" firstAttribute="bottom" secondItem="kIY-FA-k8f" secondAttribute="bottom" constant="389" id="UID-Vz-gof"/>
+                            <constraint firstItem="JzW-Z4-Mwm" firstAttribute="bottom" secondItem="kIY-FA-k8f" secondAttribute="bottom" constant="487" id="UID-Vz-gof"/>
                             <constraint firstItem="0Wh-Kq-wJY" firstAttribute="leading" secondItem="JzW-Z4-Mwm" secondAttribute="leading" constant="20" id="XFX-Gq-1ct"/>
                             <constraint firstItem="eLG-Sl-c2c" firstAttribute="centerX" secondItem="TcW-ed-OmR" secondAttribute="centerX" id="Zfq-51-re3"/>
                             <constraint firstItem="0Wh-Kq-wJY" firstAttribute="top" secondItem="eLG-Sl-c2c" secondAttribute="bottom" constant="25" id="fTa-Wx-zb2"/>
-                            <constraint firstItem="JzW-Z4-Mwm" firstAttribute="trailing" secondItem="frR-mb-tgj" secondAttribute="trailing" constant="50" id="fbq-q0-xD5"/>
+                            <constraint firstItem="JzW-Z4-Mwm" firstAttribute="trailing" secondItem="frR-mb-tgj" secondAttribute="trailing" constant="20" id="fbq-q0-xD5"/>
                             <constraint firstItem="JzW-Z4-Mwm" firstAttribute="bottom" secondItem="Qj0-f2-cnH" secondAttribute="bottom" id="fqT-UX-NCb"/>
                             <constraint firstItem="En3-nU-FIq" firstAttribute="trailing" secondItem="JzW-Z4-Mwm" secondAttribute="trailing" id="jE3-fJ-Swi"/>
+                            <constraint firstItem="kIY-FA-k8f" firstAttribute="leading" secondItem="JzW-Z4-Mwm" secondAttribute="leading" id="lBp-oA-HDF"/>
+                            <constraint firstItem="JzW-Z4-Mwm" firstAttribute="trailing" secondItem="kIY-FA-k8f" secondAttribute="trailing" id="p50-xS-cVW"/>
                             <constraint firstItem="eLG-Sl-c2c" firstAttribute="top" secondItem="JzW-Z4-Mwm" secondAttribute="top" constant="22" id="uct-Ts-rVh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JzW-Z4-Mwm"/>
@@ -280,7 +280,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RuC-Xp-xf1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HO1-Mk-10q">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
