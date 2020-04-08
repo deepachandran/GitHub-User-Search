@@ -13,6 +13,8 @@ import Alamofire
 class SearchViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate{
     
     
+    
+    
     @IBOutlet weak var userSearchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     //var dataSource = Array<User>()
@@ -21,13 +23,15 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     //var user: User!
     var searchResponses = [SearchResponse]()
-    var users = [User](){
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
+   var users = [User]()
+     var searching = false
+   //{
+//        didSet {
+//            DispatchQueue.main.async {
+//                self.tableView.reloadData()
+//            }
+//        }
+//    }
     
     var filteredUsers = [User]()
     var userCell = [UserCell]()
@@ -55,18 +59,22 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let userName = userSearchBar.text else {return}
-          SearchResult.sharedInstance.userName = userName
-                    self.downloadData {
-            //                        DispatchQueue.main.async {
-            //                         self.tableView.reloadData()
-            //                          }
-                        
-        }
-        
+        SearchResult.sharedInstance.userName = userName
+        self.downloadData{
+            SearchResult.sharedInstance.userName = userName
+self.tableView.reloadData()
+            self.tableView.isHidden = false
+    }
+     
         self.view.endEditing(true)
     }
-    
-
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        filteredUsers = users.filter({$0._name.prefix(searchText.count) == searchText})
+//                searching = true
+//        self.tableView.reloadData()
+//
+//
+//    }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
@@ -76,8 +84,13 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       //  print(dataSource.count)
+       if searching {
+            return filteredUsers.count
+        }
+        else {
         return users.count
         
+    }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print()
@@ -93,12 +106,22 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as? UserCell {
+            if searching {
+                    let searchUserDetails = filteredUsers[indexPath.row]
+                    cell.configureCell(user: searchUserDetails)
+                }
+                else {
+                     let userDetails = users[indexPath.row]
+                cell.configureCell(user: userDetails)
+            }
+            return cell
+                   }
 //        setting cell detail from user class
-       let userdetails = users[indexPath.row]
-           cell.configureCell(user: userdetails)
-          
-               return cell
-         }
+//       let userdetails = users[indexPath.row]
+//           cell.configureCell(user: userdetails)
+//
+//               return cell
+//         }
         else {
             return UserCell()
         }
@@ -116,9 +139,8 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     //Downloading searched user data for TableView
     func downloadData(completed: @escaping DownloadComplete) {
-    
-    //let forecastUrl = URL(string: FORECAST_URL)
-    AF.request(USERurl).responseJSON { response in
+        let UserAPIurl = "https://api.github.com/search/users?q=\(SearchResult.sharedInstance.userName.replacingOccurrences(of: " ", with: "+"))"
+    AF.request(UserAPIurl).responseJSON { response in
        // print(response)
         
             if let dict = response.value as? Dictionary<String, AnyObject> {
@@ -143,7 +165,7 @@ class SearchViewController: UIViewController,UITableViewDelegate,UITableViewData
                     //print("forcast is", forecast.items!)
 
 
-                    self.tableView.reloadData()
+                 self.tableView.reloadData()
                 }
             }
             completed()

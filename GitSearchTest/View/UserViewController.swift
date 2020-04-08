@@ -55,7 +55,7 @@ class UserViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                         let repoObj = repo()
                         // Now reference the data you need using:
                         //let id = dict.value(forKey: "description")
-                        repoObj.repoName =  dict.value(forKey: "description") as? String
+                        repoObj.repoName =  dict.value(forKey: "name") as? String ?? "default value"
                         repoObj.numberOfForks =  dict.value(forKey: "forks") as? Int
                         repoObj.numberOfStars =  dict.value(forKey: "stargazers_count") as? Int
                         repoObj.repoUrl = dict.value(forKey: "html_url") as? String
@@ -224,9 +224,14 @@ class UserViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
 }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchRepo = repos.filter({$0.repoName.prefix(searchText.count) == searchText})
-        searching = true
-        self.tableview.reloadData()
+//        searchRepo = repos.filter({(repo)-> Bool in
+//            return repo.repoName.uppercased().contains(searchText)
+//        })
+            searchRepo = repos.filter({$0.repoName.prefix(searchText.count) == searchText})
+            searching = true
+            self.tableview.reloadData()
+      
+        
 
        
            

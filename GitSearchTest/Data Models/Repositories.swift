@@ -9,7 +9,7 @@
 import Foundation
 
 class repo {
-    var repoName: String!
+    var repoName: String = ""
     var numberOfForks: Int!
     var numberOfStars: Int!
     var repoUrl:String!
